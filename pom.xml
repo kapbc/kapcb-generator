@@ -19,7 +19,7 @@
         <velocity.version>1.6.2</velocity.version>
         <commons-io.version>2.6</commons-io.version>
         <hutool-all.version>5.8.0.M2</hutool-all.version>
-        <main.class>com.kapcb.ccc.MyBatisPlusGeneratorApplication</main.class>
+        <main.class>com.kapcb.ccc.KapcbGeneratorApplication</main.class>
         <commons-configuration.version>1.8</commons-configuration.version>
         <mybatis-plus-generator.version>3.2.0</mybatis-plus-generator.version>
         <mybatis-plus-boot-starter.version>3.2.0</mybatis-plus-boot-starter.version>

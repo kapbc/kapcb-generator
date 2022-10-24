@@ -6,9 +6,9 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 
 /**
- * <a>Title: MyBatisGeneratorApplication </a>
+ * <a>Title: KapcbGeneratorApplication </a>
  * <a>Author: cb <a>
- * <a>Description: MyBatisGeneratorApplication <a>
+ * <a>Description: KapcbGeneratorApplication <a>
  *
  * @author cb
  * @version 1.0
@@ -16,10 +16,10 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
  * @since 1.0
  */
 @SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
-public class MyBatisPlusGeneratorApplication {
+public class KapcbGeneratorApplication {
 
     public static void main(String[] args) {
-        new SpringApplicationBuilder(MyBatisPlusGeneratorApplication.class)
+        new SpringApplicationBuilder(KapcbGeneratorApplication.class)
                 .bannerMode(Banner.Mode.OFF)
                 .run(args);
     }
