@@ -1,9 +1,11 @@
 package com.kapcb.ccc;
 
+import com.kapcb.ccc.properties.GeneratorFileProperties;
 import org.springframework.boot.Banner;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 
 /**
  * <a>Title: KapcbGeneratorApplication </a>
@@ -15,6 +17,7 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
  * @date 2022/7/18 17:57
  * @since 1.0
  */
+@EnableConfigurationProperties(value = GeneratorFileProperties.class)
 @SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
 public class KapcbGeneratorApplication {
 

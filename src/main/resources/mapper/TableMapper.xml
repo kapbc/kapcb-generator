@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kapcb.ccc.mapper.TableMapper">
+
+    <select id="foundTableInformationByTableName" resultType="com.kapcb.ccc.domain.po.TablePO">
+        SELECT
+            t.table_name    tablename,
+            t.table_comment tablecomment
+        FROM
+            information_schema.tables t
+        WHERE
+            table_schema = (SELECT DATABASE())
+          AND t.table_name = #{tableName}
+    </select>
+
+    <select id="foundTableColumnsByTableName" resultType="com.kapcb.ccc.domain.po.ColumnPO">
+        SELECT
+            c.column_name    columnName,
+            c.data_type      dataType,
+            c.column_comment columnComment,
+            c.column_key     columnKey,
+            c.extra
+        FROM
+            information_schema.columns c
+        WHERE
+            c.table_schema = (SELECT DATABASE())
+          AND c.table_name = #{tableName}
+        ORDER BY
+            c.ordinal_position
+    </select>
+
+</mapper>

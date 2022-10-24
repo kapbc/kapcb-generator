@@ -33,7 +33,7 @@ public class TablePO {
     /**
      * 表的备注
      */
-    private String comment;
+    private String tableComment;
 
     /**
      * 表的主键
