@@ -13,6 +13,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.Objects;
+import java.util.Properties;
 import java.util.zip.ZipOutputStream;
 
 /**
@@ -73,6 +74,7 @@ public class GeneratorComponent implements InitializingBean {
 
         // 设置velocity资源加载器
 
+        Properties properties = new Properties();
 
     }
 
@@ -102,6 +104,13 @@ public class GeneratorComponent implements InitializingBean {
         return WordUtils.capitalizeFully(columnName, new char[]{'_'}).replace("_", "");
     }
 
+    /**
+     * convert table to java
+     *
+     * @param tableName   tableName
+     * @param tablePrefix tablePrefix
+     * @return java attr name
+     */
     public static String tableToJava(String tableName, String tablePrefix) {
         if (StringUtils.isNotBlank(tablePrefix)) {
             tableName = tableName.substring(tablePrefix.length());
